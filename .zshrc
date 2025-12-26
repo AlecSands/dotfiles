@@ -4,9 +4,6 @@ export EDITOR=vim
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-export PATH="/Users/alecsands/bin:$PATH"
-export PATH="/Users/alecsands/go/bin:$PATH"
-
 bindkey "^R" history-incremental-search-backward
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
