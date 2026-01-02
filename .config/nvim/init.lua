@@ -1,2 +1,6 @@
-require("config.lazy")
+require("manage-plugins.lazy")
 require("opt")
+require("notes")
+require("docs")
+require("welcome")
+require("registers")
