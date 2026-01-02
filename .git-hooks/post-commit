@@ -10,7 +10,7 @@ case "$(uname -s)" in
         # Check if running in WSL
         if grep -qi microsoft /proc/version 2>/dev/null; then
             # WSL - use Windows sound
-            powershell.exe -c "(New-Object Media.SoundPlayer 'C:\Windows\Media\Windows Proximity Notification.wav').PlaySync()" &
+            powershell.exe -c "(New-Object Media.SoundPlayer 'C:\Windows\Media\Ring06.wav').PlaySync()" &
         else
             # Native Linux
             paplay /usr/share/sounds/freedesktop/stereo/complete.oga 2>/dev/null || \
@@ -19,7 +19,7 @@ case "$(uname -s)" in
         ;;
     MINGW*|MSYS*|CYGWIN*)
         # Git Bash on Windows
-        powershell.exe -c "(New-Object Media.SoundPlayer 'C:\Windows\Media\Windows Proximity Notification.wav').PlaySync()" &
+        powershell.exe -c "(New-Object Media.SoundPlayer 'C:\Windows\Media\Ring06.wav').PlaySync()" &
         ;;
     *)
         # Unknown OS - try a generic approach
