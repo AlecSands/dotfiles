@@ -2,8 +2,15 @@
 
 Managed using the **bare repository** method.
 
-### Quick Setup on a new machine:
+## Quick Setup on a new machine:
 1. `alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'`
 2. `git clone --bare git@github.com:AlecSands/dotfiles.git $HOME/.cfg`
 3. `config config --local status.showUntrackedFiles no`
 4. `config checkout`
+
+## Global Git Setup
+The dotfiles include some global hooks for commits and pushes. To enable
+them use the following command.
+```
+git config --global core.hooksPath ~/.git-hooks
+```
