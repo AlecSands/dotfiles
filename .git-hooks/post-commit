@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Detect the operating system
+case "$(uname -s)" in
+    Darwin*)
+        # macOS
+        afplay /System/Library/Sounds/Glass.aiff &
+        ;;
+    Linux*)
+        # Check if running in WSL
+        if grep -qi microsoft /proc/version 2>/dev/null; then
+            # WSL - use Windows sound
+            powershell.exe -c "(New-Object Media.SoundPlayer 'C:\Windows\Media\Windows Proximity Notification.wav').PlaySync()" &
+        else
+            # Native Linux
+            paplay /usr/share/sounds/freedesktop/stereo/complete.oga 2>/dev/null || \
+            aplay /usr/share/sounds/freedesktop/stereo/complete.oga 2>/dev/null
+        fi
+        ;;
+    MINGW*|MSYS*|CYGWIN*)
+        # Git Bash on Windows
+        powershell.exe -c "(New-Object Media.SoundPlayer 'C:\Windows\Media\Windows Proximity Notification.wav').PlaySync()" &
+        ;;
+    *)
+        # Unknown OS - try a generic approach
+        echo "OS not recognized, skipping sound"
+        ;;
+esac
