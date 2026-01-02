@@ -1,14 +1,13 @@
---vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
--- local builtin = require("telescope.builtin")
 return {
-  "nvim-telescope/telescope.nvim",
-  keys = {
-    {
-      "<leader>fh",
-      function()
-        return require("telescope.builtin").help_tags()
-      end,
-      desc = "Find help tags",
+    'nvim-telescope/telescope.nvim',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        -- optional but recommended
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
-  },
+    keys = {
+	    { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
+	    { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Find in files' },
+	    { '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Find help tags' },
+    },
 }
