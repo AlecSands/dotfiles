@@ -15,7 +15,7 @@ return {
 
 		-- Manually start treesitter highlighting and set up folding
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+			pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact", "lua" },
 			callback = function()
 				-- Explicitly start treesitter
 				vim.treesitter.start()

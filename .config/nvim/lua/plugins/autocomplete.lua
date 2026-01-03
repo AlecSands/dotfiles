@@ -27,7 +27,7 @@ return {
 			"saadparwaiz1/cmp_luasnip", -- Snippet completions
 			"L3MON4D3/LuaSnip",
 		},
-		config = function(_, opts)
+		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 
