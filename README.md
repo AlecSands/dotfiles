@@ -14,3 +14,4 @@ them use the following command.
 ```
 git config --global core.hooksPath ~/.git-hooks
 ```
+
