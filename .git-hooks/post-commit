@@ -4,7 +4,7 @@
 case "$(uname -s)" in
     Darwin*)
         # macOS
-        afplay /System/Library/Sounds/Glass.aiff &
+        afplay /System/Library/Sounds/Hero.aiff &
         ;;
     Linux*)
         # Check if running in WSL
