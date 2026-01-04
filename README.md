@@ -15,3 +15,7 @@ them use the following command.
 git config --global core.hooksPath ~/.git-hooks
 ```
 
+Update git to use nvim for its editor.
+```
+git config --global core.editor "nvim"
+```
