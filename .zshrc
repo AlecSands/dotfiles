@@ -1,5 +1,5 @@
 bindkey -v
-export EDITOR=vim
+export EDITOR=nvim
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh

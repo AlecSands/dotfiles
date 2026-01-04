@@ -124,8 +124,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Enable vi mode
 set -o vi
 
-# Set vim as default editor
-export EDITOR=vim
+# Set neovim as default editor
+export EDITOR=nvim
 
 # Ctrl+R for reverse history search in vi mode
 bind '"\C-r": reverse-search-history'
