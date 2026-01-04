@@ -2,7 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	opts = {
-		ensure_installed = { "javascript", "typescript", "jsx", "tsx" },
+		ensure_installed = { "javascript", "typescript", "tsx" },
 		highlight = { enable = true },
 		indent = { enable = true },
 	},
