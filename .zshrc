@@ -1,9 +1,6 @@
 bindkey -v
 export EDITOR=nvim
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 bindkey "^R" history-incremental-search-backward
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
