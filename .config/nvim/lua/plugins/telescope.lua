@@ -5,9 +5,17 @@ return {
 		-- optional but recommended
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
-	keys = {
-		{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-		{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Find in files" },
-		{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Find help tags" },
-	},
+	config = function()
+		require("telescope").setup({})
+		local builtin = require("telescope.builtin")
+		vim.keymap.set("n", "<leader>ff", function()
+			builtin.find_files()
+		end)
+		vim.keymap.set("n", "<leader>fg", function()
+			builtin.live_grep()
+		end)
+		vim.keymap.set("n", "<leader>fh", function()
+			builtin.help_tags()
+		end)
+	end,
 }
