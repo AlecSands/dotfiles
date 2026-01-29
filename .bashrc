@@ -158,3 +158,5 @@ alias pbpaste='xclip -selection clipboard -o'
 
 # Open notes
 alias notes='nvim ~/Code/notes.md'
+
+export PATH=$PATH:/usr/local/go/bin

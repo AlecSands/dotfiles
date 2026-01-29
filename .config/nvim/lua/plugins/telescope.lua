@@ -17,5 +17,8 @@ return {
 		vim.keymap.set("n", "<leader>fh", function()
 			builtin.help_tags()
 		end)
+		vim.keymap.set("n", "<leader>ft", function()
+			print(builtin.symbols())
+		end)
 	end,
 }
